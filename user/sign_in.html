@@ -9,13 +9,31 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/user.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/user.css" />
   </head>
   <body>
-    <script src="./js/user.js"></script>
-    <script src="./js/common.js"></script>
-    <script src="./js/util.js"></script>
+    <h2 id="title">로그인</h2>
+    <div id="login-container">
+      <input type="text" placeholder="아이디" />
+      <input type="password" placeholder="비밀번호" />
+
+      <div class="checkbox-container">
+        <label>
+          <input type="checkbox" />
+          <span class="checkbox-label">아이디 저장</span>
+        </label>
+      </div>
+
+      <button class="loginBtn">로그인</button>
+      <div class="links">
+        <a href="road">회원가입</a>
+        <a href="road1">비밀번호 찾기</a>
+      </div>
+    </div>
+    <script src="../js/user.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/util.js"></script>
   </body>
 </html>
