@@ -9,13 +9,72 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/review_detail.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/review_detail.css" />
   </head>
   <body>
-    <script src="./js/review_detail.js"></script>
-    <script src="./js/common.js"></script>
-    <script src="./js/util.js"></script>
+    <div id="wrapper">
+      <h1>마루시치 긴자점(丸七)</h1>
+
+      <button id="edit-btn">수정</button>
+      <button id="delete-btn">삭제</button>
+
+      <div id="main1">
+        <div class="star">
+          <p class="active">o</p>
+          <p class="active">o</p>
+          <p class="active">o</p>
+          <p class="active">o</p>
+          <p>o</p>
+        </div>
+        <div id="hashtag">#맛집 #카츠동 #돈카츠</div>
+      </div>
+
+      <div id="main-img">
+        <img src="../resources/images/review01.jpeg" alt="onibuscoffee" />
+      </div>
+
+      <div id="main2">
+        <div id="main2-1">
+          <p id="gender">남성</p>
+          <p>|</p>
+          <p id="age">30대</p>
+        </div>
+
+        <div id="main2-2">
+          <p id="period">시기</p>
+          <p id="date">2024년 10월</p>
+        </div>
+
+        <div id="main2-3">
+          <p id="companion">동행</p>
+          <p id="companion-content">단독</p>
+        </div>
+      </div>
+
+      <div id="content">
+        <p>장소 소개</p>
+        <div id="content-1">
+          한국에서 보기 힘든 엄청 두꺼운 돈까스를 덮밥으로 먹을 수 있는
+          곳입니다.
+          <br />두께에 비해서 부드러운 고기가 인상적이고 소스 외에도
+          <br />시치미나 소금 같은 다양한 조합을 맛볼 수 있게 준비되어 있습니다.
+          <br />식사 후에는 근처에 미츠코시 백화점이나 카페들이 있어 여행 동선을
+          짜기 좋습니다
+        </div>
+      </div>
+
+      <div id="main3">
+        <div id="like">
+          <button id="like-btn">좋아요</button>
+          <p id="like-count">11</p>
+        </div>
+        <button id="share-btn">공유</button>
+      </div>
+    </div>
+    <script src="../js/review_detail.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/util.js"></script>
   </body>
 </html>
