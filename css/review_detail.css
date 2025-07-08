@@ -1,1 +1,133 @@
 @charset "utf-8";
+#wrapper {
+  top: 100px;
+  position: relative;
+  width: 800px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#edit-btn,
+#delete-btn {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-size: 24px;
+  text-indent: -999999px;
+}
+#edit-btn {
+  background-image: url(../resources/icons/edit.png);
+  position: absolute;
+  top: 10px;
+  right: 44px;
+}
+#delete-btn {
+  background-image: url(../resources/icons/delete.png);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#main1 {
+  margin-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.star {
+  display: flex;
+  gap: 5px;
+}
+.star p {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #113062;
+  border-radius: 50%;
+  text-indent: -999999px;
+}
+.star .active {
+  background-color: #113062;
+}
+
+#main2 {
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+#main-img img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+#main-img {
+  margin-top: 30px;
+}
+#main2 {
+  display: flex;
+  gap: 50px;
+  width: 600px;
+  margin-left: 100px;
+}
+
+#main2-1 {
+  display: flex;
+  gap: 20px;
+}
+#main2-2,
+#main2-3 {
+  display: flex;
+  gap: 10px;
+}
+
+#main2-1,
+#period,
+#companion,
+#hashtag {
+  font-size: 22px;
+}
+#date,
+#companion-content {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#content {
+  margin-top: 30px;
+  text-align: left;
+  width: 600px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content-1 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 600px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-size: 18px;
+}
+#main3 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+#like-btn,
+#share-btn {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-size: 24px;
+  text-indent: -999999px;
+}
+#like-btn {
+  background-image: url(../resources/icons/heart.png);
+}
+
+#share-btn {
+  background-image: url(../resources/icons/share.png);
+}
