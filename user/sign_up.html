@@ -9,13 +9,29 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/user.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/user.css" />
   </head>
   <body>
-    <script src="./js/user.js"></script>
-    <script src="./js/common.js"></script>
-    <script src="./js/util.js"></script>
+    <div id="signup-container">
+      <input type="text" placeholder="이메일" />
+      <input type="password" placeholder="비밀번호" />
+      <input type="password" placeholder="비밀번호 확인" />
+      <input type="text" placeholder="닉네임" />
+      <input type="text" placeholder="생년월일8자리" />
+      <div class="genderBtn">
+        <button type="button" class="male-Btn">남자</button>
+        <button type="button" class="female-Btn">여자</button>
+      </div>
+      <div class="agreement">
+        <input type="checkbox" id="agree" />
+        <label for="agree">개인정보 수집 동의</label>
+      </div>
+      <button class="submitBtn">회원가입</button>
+    </div>
+    <script src="../js/user.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/util.js"></script>
   </body>
 </html>
