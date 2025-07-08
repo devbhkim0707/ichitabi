@@ -1,1 +1,86 @@
 @charset "utf-8";
+
+#wrapper {
+  padding-top: 100px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#review-div {
+  margin-top: 60px;
+}
+
+#review-div ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.review-list {
+  margin-bottom: 30px;
+  width: 280px;
+  height: 400px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.review-list .photo {
+  margin-bottom: 12px;
+}
+
+.review-list img {
+  width: 280px;
+  height: 280px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.review-list .age 
+{
+  font-size: 14px;
+  color: #121212;
+  margin-bottom: 10px;
+}
+
+.review-list .title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #121212;
+  margin-bottom: 5px;
+}
+
+.review-list .place {
+  font-size: 14px;
+  color: #121212;
+  margin-bottom: 5px;
+}
+
+.review-list .hash {
+  font-size: 12px;
+  font-weight: 400;
+  color: #b5b5b5;
+}
+
+.review-list .favo {
+  position: absolute;
+  top: 290px;
+  right: 0;
+}
+
+.review-list .favo button {
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  background-image: url(../resources/icon/heart.png);
+  text-indent: -99999px;
+}
+
+.on {
+    width: 20px;
+  height: 20px;
+  background-size: 20px;
+  background-image: url(../resources/icon/heart-2.png);
+  text-indent: -99999px;
+}
+
+
