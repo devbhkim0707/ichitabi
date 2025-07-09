@@ -10,7 +10,7 @@
   margin-top: 60px;
 }
 
-#review-div ul{
+#review-div ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -35,8 +35,7 @@
   object-fit: cover;
 }
 
-.review-list .age 
-{
+.review-list .age {
   font-size: 14px;
   color: #121212;
   margin-bottom: 10px;
@@ -71,16 +70,14 @@
   width: 20px;
   height: 20px;
   background-size: 20px;
-  background-image: url(../resources/icon/heart.png);
+  background-image: url(../resources/icons/heart.png);
   text-indent: -99999px;
 }
 
 .on {
-    width: 20px;
+  width: 20px;
   height: 20px;
   background-size: 20px;
-  background-image: url(../resources/icon/heart-2.png);
+  background-image: url(../resources/icons/redheart.png);
   text-indent: -99999px;
 }
-
-
