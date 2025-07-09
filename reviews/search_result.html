@@ -1,149 +1,211 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICHITABI - 당신의 가장 좋았던 일본을 공유해주세요</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/reviews_list.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>ICHITABI - 당신의 가장 좋았던 일본을 공유해주세요</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/reset.css" />
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/reviews_list.css" />
-</head>
-
-<body>
-  <div id="wrapper">
-    <h2>'키워드'검색 결과 여행지 추천</h2>
-    <div id="review-div">
-      <ul>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reviewList01.jpeg" alt="마루시치 긴자점">
-            </p>
-            <p class="age">30대 남성</p>
-            <p class="title">마루시치 긴자점</p>
-            <p class="place">도쿄도 주오구</p>
-            <p class="hash">#맛집 #카츠동 #돈카츠</p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reviewList02.jpeg" alt="긴자 스시 후쿠쥬"></p>
-            <p class="age">30대 남성</p>
-            <p class="title">긴자 스시 후쿠쥬(鮨 ふくじゅ)</p>
-            <p class="place">도쿄도 주오구</p>
-            <p class="hash">#맛집 #스시 #오마카세</p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reviewList03.jpeg" alt="우설 전문점 네기시 도겐자카점(ねぎし)"></p>
-            <p class="age">30대 남성</p>
-            <p class="title">우설 전문점 네기시 도겐자카점(ねぎし)</p>
-            <p class="place">도쿄도 신주쿠구</p>
-            <p class="hash">#맛집 #우설 #체인점</p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reveiwList07.jpeg" alt="카사이 린카이 수족관"></p>
-            <p class="age">20대 남성</p>
-            <p class="title">카사이 린카이 수족관</p>
-            <p class="place">도쿄도</p>
-            <p class="hash">#노을빛 #인생사진 #수족관</p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reviewList04.jpeg" alt="오니버스 커피"></p>
-            <p class="age">20대 여성</p>
-            <p class="title">onibuscoffee (오니버스 커피)</p>
-            <p class="place">메구로구</p>
-            <p class="hash">#도쿄카페 #나카메구로 #드립커피</p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reviewList05.jpeg" alt="spring valley brewery"></p>
-            <p class="age">20대 여성</p>
-            <p class="title">spring valley brewery (スプリングバレーブルワリー東京)</p>
-            <p class="place">시부야구</p>
-            <p class="hash">#도쿄맥주 #다이칸야마 #브루어리</p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reviewList06.jpeg" alt="bellustar"></p>
-            <p class="age">20대 여성</p>
-            <p class="title">bellustar</p>
-            <p class="place">신주쿠구</p>
-            <p class="hash">#도쿄야경 #벨루스타도쿄 #칵테일</p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reviewList08.png" alt="요요기공원(代々木公園)"></p>
-            <p class="age">20대 남성</p>
-            <p class="title">요요기공원(代々木公園)</p>
-            <p class="place">도쿄도</p>
-            <p class="hash">#공원 #산책 #운동</p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reviewList09.png" alt="미타카의 숲 지브리 미술관"></p>
-            <p class="age">20대 남성</p>
-            <p class="title">미타카의 숲 지브리 미술관</p>
-            <p class="place">도쿄도</p>
-            <p class="hash">#지브리애니#굿즈#덕후</p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reviewList10.jpeg" alt="센소지 사원(浅草寺)"></p>
-            <p class="age">20대 남성</p>
-            <p class="title">센소지 사원(浅草寺)</p>
-            <p class="place">도쿄도</p>
-            <p class="hash">#신사 #센소지 #신년 </p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reviewList11.jpeg" alt="츠루동탄 롯폰기점"></p>
-            <p class="age">30대 남성</p>
-            <p class="title">츠루동탄 롯폰기점</p>
-            <p class="place">도쿄도 미나토구</p>
-            <p class="hash">#맛집 #우동 #토로로우동</p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-        <li class="review-list">
-          <a href="">
-            <p class="photo"><img src="../resources/imeges/reviewList12.jpeg" alt="곤파치 니시아자부"></p>
-            <p class="age">20대 여성</p>
-            <p class="title">곤파치 니시아자부</p>
-            <p class="place">도쿄도 미나토구</p>
-            <p class="hash">#도쿄술집 #킬빌촬영지 #이자카야</p>
-          </a>
-          <p class="favo"><button>찜</button></p>
-        </li>
-      </ul>
+  <body>
+    <div id="wrapper">
+      <h2>'키워드'검색 결과 여행지 추천</h2>
+      <div id="review-div">
+        <ul>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reviewList01.jpeg"
+                  alt="마루시치 긴자점"
+                />
+              </p>
+              <p class="age">30대 남성</p>
+              <p class="title">마루시치 긴자점</p>
+              <p class="place">도쿄도 주오구</p>
+              <p class="hash">#맛집 #카츠동 #돈카츠</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reviewList02.jpeg"
+                  alt="긴자 스시 후쿠쥬"
+                />
+              </p>
+              <p class="age">30대 남성</p>
+              <p class="title">긴자 스시 후쿠쥬(鮨 ふくじゅ)</p>
+              <p class="place">도쿄도 주오구</p>
+              <p class="hash">#맛집 #스시 #오마카세</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reviewList03.jpeg"
+                  alt="우설 전문점 네기시 도겐자카점(ねぎし)"
+                />
+              </p>
+              <p class="age">30대 남성</p>
+              <p class="title">우설 전문점 네기시 도겐자카점(ねぎし)</p>
+              <p class="place">도쿄도 신주쿠구</p>
+              <p class="hash">#맛집 #우설 #체인점</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reveiwList07.jpeg"
+                  alt="카사이 린카이 수족관"
+                />
+              </p>
+              <p class="age">20대 남성</p>
+              <p class="title">카사이 린카이 수족관</p>
+              <p class="place">도쿄도</p>
+              <p class="hash">#노을빛 #인생사진 #수족관</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reviewList04.jpeg"
+                  alt="오니버스 커피"
+                />
+              </p>
+              <p class="age">20대 여성</p>
+              <p class="title">onibuscoffee (오니버스 커피)</p>
+              <p class="place">메구로구</p>
+              <p class="hash">#도쿄카페 #나카메구로 #드립커피</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reviewList05.jpeg"
+                  alt="spring valley brewery"
+                />
+              </p>
+              <p class="age">20대 여성</p>
+              <p class="title">
+                spring valley brewery (スプリングバレーブルワリー東京)
+              </p>
+              <p class="place">시부야구</p>
+              <p class="hash">#도쿄맥주 #다이칸야마 #브루어리</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reviewList06.jpeg"
+                  alt="bellustar"
+                />
+              </p>
+              <p class="age">20대 여성</p>
+              <p class="title">bellustar</p>
+              <p class="place">신주쿠구</p>
+              <p class="hash">#도쿄야경 #벨루스타도쿄 #칵테일</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reviewList08.png"
+                  alt="요요기공원(代々木公園)"
+                />
+              </p>
+              <p class="age">20대 남성</p>
+              <p class="title">요요기공원(代々木公園)</p>
+              <p class="place">도쿄도</p>
+              <p class="hash">#공원 #산책 #운동</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reviewList09.png"
+                  alt="미타카의 숲 지브리 미술관"
+                />
+              </p>
+              <p class="age">20대 남성</p>
+              <p class="title">미타카의 숲 지브리 미술관</p>
+              <p class="place">도쿄도</p>
+              <p class="hash">#지브리애니#굿즈#덕후</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reviewList10.jpeg"
+                  alt="센소지 사원(浅草寺)"
+                />
+              </p>
+              <p class="age">20대 남성</p>
+              <p class="title">센소지 사원(浅草寺)</p>
+              <p class="place">도쿄도</p>
+              <p class="hash">#신사 #센소지 #신년</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reviewList11.jpeg"
+                  alt="츠루동탄 롯폰기점"
+                />
+              </p>
+              <p class="age">30대 남성</p>
+              <p class="title">츠루동탄 롯폰기점</p>
+              <p class="place">도쿄도 미나토구</p>
+              <p class="hash">#맛집 #우동 #토로로우동</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+          <li class="review-list">
+            <a href="">
+              <p class="photo">
+                <img
+                  src="../resources/images/reviewList12.jpeg"
+                  alt="곤파치 니시아자부"
+                />
+              </p>
+              <p class="age">20대 여성</p>
+              <p class="title">곤파치 니시아자부</p>
+              <p class="place">도쿄도 미나토구</p>
+              <p class="hash">#도쿄술집 #킬빌촬영지 #이자카야</p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <script src="../js/reviews_list.js"></script>
-  <script src="../js/common.js"></script>
-  <script src="../js/util.js"></script>
-</body>
-
+    <script src="../js/reviews_list.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/util.js"></script>
+  </body>
 </html>

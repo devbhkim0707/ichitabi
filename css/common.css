@@ -6,3 +6,103 @@
   font-weight: 400;
   font-style: normal;
 }
+
+header {
+  position: relative;
+  min-width: 1200px;
+  box-shadow: 0px 0px 50px #dfdfdf;
+}
+
+header #header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  margin-bottom: 24px;
+}
+
+header #ichitabi-logo {
+  width: 300px;
+  height: 105px;
+  text-indent: -999999px;
+  background-image: url('../resources/images/ICHITABI_LOGO_transparent.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+header .header-right ul {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header .header-right ul a {
+  display: block;
+  border-radius: 5px;
+  padding: 0 8px;
+  text-align: center;
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: #113062;
+}
+
+header .header-right ul .log-out {
+  display: none;
+}
+
+header .header-right ul .header-search {
+  display: none;
+}
+
+header .header-right ul #search-top-input {
+  padding-left: 5px;
+  height: 24px;
+  width: 120px;
+  border: 1px solid #113062;
+  border-radius: 5px;
+}
+
+header .header-right ul #search-top {
+  width: 20px;
+  height: 20px;
+  text-indent: -999999px;
+  margin: 4px 10px 0 2px;
+  background-image: url('../resources/icons/magnifying-glass.png');
+  background-size: cover;
+}
+
+header gnb {
+  position: absolute;
+  left: 50%;
+  margin-left: -240px;
+  bottom: 25px;
+}
+
+header gnb ul {
+  display: flex;
+  gap: 20px;
+}
+
+header gnb li a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #212121;
+}
+
+header gnb li .seperator {
+  display: block;
+  width: 1px;
+  height: 20px;
+  margin-top: 10px;
+  background-color: #b5b5b5;
+}
+
+footer {
+  min-width: 1200px;
+  background-color: #f0f0f0;
+}
+
+footer .footer-temp {
+  width: 100%;
+  height: 500px;
+}

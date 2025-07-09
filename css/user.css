@@ -67,14 +67,10 @@
   color: #212121;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-}
 #signup-container {
   width: 500px;
+  margin: 0 auto;
+  padding-top: 100px;
   text-align: center;
   color: #212121;
 }
