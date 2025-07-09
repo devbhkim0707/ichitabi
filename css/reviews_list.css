@@ -1,9 +1,8 @@
 @charset "utf-8";
 
 #wrapper {
-  padding-top: 100px;
   width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 #review-div {

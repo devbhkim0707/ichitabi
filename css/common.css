@@ -18,7 +18,6 @@ header #header-wrapper {
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  margin-bottom: 24px;
 }
 
 header #ichitabi-logo {
@@ -38,19 +37,19 @@ header .header-right ul {
 
 header .header-right ul a {
   display: block;
-  border-radius: 5px;
-  padding: 0 8px;
+  border-radius: 10px;
+  padding: 5px 10px;
   text-align: center;
   line-height: 1.6;
   color: #ffffff;
   background-color: #113062;
 }
 
-header .header-right ul .log-out {
+header .header-right ul #log-out {
   display: none;
 }
 
-header .header-right ul .header-search {
+header .header-right ul #header-search {
   display: none;
 }
 
@@ -71,25 +70,25 @@ header .header-right ul #search-top {
   background-size: cover;
 }
 
-header gnb {
+header .gnb {
   position: absolute;
   left: 50%;
-  margin-left: -240px;
-  bottom: 25px;
+  margin-left: -200px;
+  top: 70px;
 }
 
-header gnb ul {
+header .gnb ul {
   display: flex;
   gap: 20px;
 }
 
-header gnb li a {
+header .gnb li a {
   font-size: 24px;
   font-weight: 700;
   color: #212121;
 }
 
-header gnb li .seperator {
+header .gnb li .seperator {
   display: block;
   width: 1px;
   height: 20px;
