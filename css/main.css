@@ -1,15 +1,12 @@
 @charset "utf-8";
 
-#wrapper {
-  width: 1200px;
-  margin: 0 auto;
-  /* background-color: antiquewhite; */
-}
-
 #search {
-  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 165px);
   text-align: center;
-  padding-top: 250px;
 }
 
 #search .message-main {
@@ -18,20 +15,31 @@
   margin-bottom: 60px;
 }
 
+#search .search-main-box {
+  position: relative;
+}
+
 #search #search-main-input {
-  height: 36px;
+  height: 50px;
   width: 600px;
-  border: 2px solid #113062;
-  border-radius: 18px;
+  outline: 2px solid #121212;
+  border: none;
+  border-radius: 25px;
   padding: 0 20px;
   font-size: 20px;
 }
 
+#search #search-main-input:focus {
+  outline: 3px solid #113062;
+}
+
 #search #search-main {
-  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  display: block;
   width: 28px;
   height: 28px;
-  margin: 6px 0 0 10px;
   text-indent: -999999px;
   background-image: url('../resources/icons/magnifying-glass.png');
   background-size: cover;

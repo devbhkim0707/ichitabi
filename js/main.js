@@ -1,6 +1,2 @@
 // main.js
-
-$(function () {
-  $('#header').load('../components/header.html');
-  $('#footer').load('../components/footer.html');
-});
+isMainPage = true;
