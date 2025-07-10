@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8">
     <title>ICHITABI - 당신의 가장 좋았던 일본을 공유해주세요</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,14 +13,12 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/reviews_list.css" />
-  </head>
-
+</head>
   <body>
     <div id="header"></div>
     <div id="wrapper">
-      <h2>'키워드'검색 결과 여행지 추천</h2>
       <div id="review-div">
-        <ul>
+        <ul id="review-ul">
           <li class="review-list">
             <a href="detail.html">
               <p class="photo">
@@ -143,70 +141,26 @@
             </a>
             <p class="favo"><button>찜</button></p>
           </li>
-          <li class="review-list">
-            <a href="">
-              <p class="photo">
-                <img
-                  src="../resources/images/reviewList09.png"
-                  alt="미타카의 숲 지브리 미술관"
-                />
-              </p>
-              <p class="age">20대 남성</p>
-              <p class="title">미타카의 숲 지브리 미술관</p>
-              <p class="place">도쿄도</p>
-              <p class="hash">#지브리애니#굿즈#덕후</p>
-            </a>
-            <p class="favo"><button>찜</button></p>
-          </li>
-          <li class="review-list">
-            <a href="">
-              <p class="photo">
-                <img
-                  src="../resources/images/reviewList10.jpeg"
-                  alt="센소지 사원(浅草寺)"
-                />
-              </p>
-              <p class="age">20대 남성</p>
-              <p class="title">센소지 사원(浅草寺)</p>
-              <p class="place">도쿄도</p>
-              <p class="hash">#신사 #센소지 #신년</p>
-            </a>
-            <p class="favo"><button>찜</button></p>
-          </li>
-          <li class="review-list">
-            <a href="">
-              <p class="photo">
-                <img
-                  src="../resources/images/reviewList11.jpeg"
-                  alt="츠루동탄 롯폰기점"
-                />
-              </p>
-              <p class="age">30대 남성</p>
-              <p class="title">츠루동탄 롯폰기점</p>
-              <p class="place">도쿄도 미나토구</p>
-              <p class="hash">#맛집 #우동 #토로로우동</p>
-            </a>
-            <p class="favo"><button>찜</button></p>
-          </li>
-          <li class="review-list">
-            <a href="">
-              <p class="photo">
-                <img
-                  src="../resources/images/reviewList12.jpeg"
-                  alt="곤파치 니시아자부"
-                />
-              </p>
-              <p class="age">20대 여성</p>
-              <p class="title">곤파치 니시아자부</p>
-              <p class="place">도쿄도 미나토구</p>
-              <p class="hash">#도쿄술집 #킬빌촬영지 #이자카야</p>
-            </a>
-            <p class="favo"><button>찜</button></p>
-          </li>
         </ul>
       </div>
+      <div id="more-btn"><button>더 보기</button></div>
     </div>
     <div id="footer"></div>
+
+    <template id="reviews-template">
+      <li class="review-list">
+        <a href="">
+              <p>
+                <img class="photo">
+              </p>
+              <p class="age"></p>
+              <p class="title"></p>
+              <p class="place"></p>
+              <p class="hash"></p>
+            </a>
+            <p class="favo"><button>찜</button></p>
+      </li>
+    </template>
     <script src="../js/reviews_list.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/util.js"></script>

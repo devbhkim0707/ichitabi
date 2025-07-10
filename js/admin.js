@@ -1,5 +1,5 @@
 const pages = document.querySelectorAll('.page');
-const pageBtns = document.querySelectorAll('.page-btn')
+const pageBtns = document.querySelectorAll('.page-btn');
 
 pages.forEach(page => {
   page.addEventListener('click', () => {
@@ -13,4 +13,4 @@ pageBtns.forEach(page => {
     pageBtns.forEach((p) => p.classList.remove('active'));
     page.classList.add('active')
   });
-})
+});

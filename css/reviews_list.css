@@ -2,7 +2,7 @@
 
 #wrapper {
   width: 1200px;
-  margin: auto;
+  margin: 100px auto;
 }
 
 #review-div {
@@ -45,6 +45,9 @@
   font-weight: 500;
   color: #121212;
   margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .review-list .place {
@@ -57,6 +60,9 @@
   font-size: 12px;
   font-weight: 400;
   color: #b5b5b5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .review-list .favo {
@@ -79,4 +85,17 @@
   background-size: 20px;
   background-image: url(../resources/icons/redheart.png);
   text-indent: -99999px;
+}
+
+#more-btn {
+  width: 130px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
 }
