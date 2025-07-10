@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+#wrapper {
+  width: 1200px;
+  margin: 100px auto;
+}
+
+#wrapper .page-title {
+  margin-bottom: 60px;
+}
+
+#regions-list {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+#regions-list li {
+  width: 200px;
+}
+
+#regions-list li img {
+  width: 160px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+#regions-list .region-name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 2;
+  margin-left: 20px;
+  color: #121212;
+}
+
+#regions-list .cities {
+  margin-left: 40px;
+}
+
+#regions-list .cities a {
+  color: #121212;
+}
