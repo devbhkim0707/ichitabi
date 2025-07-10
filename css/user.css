@@ -18,7 +18,7 @@
   height: 50px;
   padding: 10px;
   font-size: 18px;
-  font-weight: 400px;
+  font-weight: 400;
   color: #212121;
   border: 2px solid #212121;
   border-radius: 12px;
@@ -30,6 +30,26 @@
 }
 #login-container input[type='password'] {
   margin-bottom: 30px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+.pw-toggle-btn {
+  position: absolute;
+  right: 15px;
+  top: 16%;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  cursor: pointer;
+}
+.pw-toggle-btn.hidden {
+  background-image: url('/resources/icons/hidden.png');
+}
+
+.pw-toggle-btn.visible {
+  background-image: url('/resources/icons/eye.png');
 }
 
 .checkbox-container {
@@ -72,6 +92,7 @@
   width: 500px;
   margin: 0 auto;
   padding-top: 100px;
+  margin-bottom: 100px;
   text-align: center;
   color: #212121;
 }
@@ -100,8 +121,16 @@
 .male-Btn {
   color: white;
 }
+.male-Btn.selected {
+  background-color: #113062;
+  border-color: #212121;
+}
 .female-Btn {
   color: white;
+}
+.female-Btn.selected {
+  background-color: #113062;
+  border-color: #212121;
 }
 
 .agreement input[type='checkbox'] {
