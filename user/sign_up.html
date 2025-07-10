@@ -17,14 +17,32 @@
   <body>
     <div id="header"></div>
     <div id="signup-container">
-      <input type="text" placeholder="이메일" />
-      <input type="password" placeholder="비밀번호" />
-      <input type="password" placeholder="비밀번호 확인" />
-      <input type="text" placeholder="닉네임" />
-      <input type="text" placeholder="생년월일8자리" />
+      <input type="text" id="email" placeholder="이메일" />
+
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="비밀번호" /><button
+          type="button"
+          id="togglePassword"
+          class="pw-toggle-btn hidden"
+        ></button>
+      </div>
+      <div class="password-wrapper">
+        <input
+          type="password"
+          id="re-password"
+          placeholder="비밀번호 확인"
+        /><button
+          type="button"
+          id="toggleRePassword"
+          class="pw-toggle-btn hidden"
+        ></button>
+      </div>
+
+      <input type="text" id="name" placeholder="닉네임" />
+      <input type="text" id="birth-date" placeholder="생년월일8자리" />
       <div class="genderBtn">
-        <button type="button" class="male-Btn">남자</button>
-        <button type="button" class="female-Btn">여자</button>
+        <button type="button" id="manBtn" class="male-Btn">남자</button>
+        <button type="button" id="womenBtn" class="female-Btn">여자</button>
       </div>
       <div class="agreement">
         <input type="checkbox" id="agree" />
