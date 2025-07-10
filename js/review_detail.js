@@ -1,8 +1,7 @@
 // review_detail.js
-/*
-function redLike(){
-    const likeBtn = document.getElementById('like-btn');
 
-    if( likeBtn.src
-}
-    class list add/ remove*/
+const likeBtn = document.getElementById('like-btn');
+
+likeBtn.addEventListener('click', () => {
+  likeBtn.classList.toggle('on');
+});
