@@ -110,25 +110,33 @@ function addHashtag() {
     hashtags.push(sanitizedHashtag);
 
     // 해시태그 요소 생성 및 추가
+    const hashtagWrapper = document.createElement('div');
+    hashtagWrapper.classList.add('hashtag-item');
+
     const hashtagElement = document.createElement('span');
     hashtagElement.classList.add('add-hashtag');
     hashtagElement.textContent = `#${sanitizedHashtag}`;
-    hashtagList.appendChild(hashtagElement);
 
     // 해시태그 삭제 버튼 추가
     // 삭제 버튼 생성
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-btn');
-
     deleteButton.textContent = 'x';
 
     // 삭제 버튼 클릭 이벤트
     deleteButton.addEventListener('click', function () {
-      hashtagElement.remove(); // 삭제버튼 누르면 요소 삭제
+      hashtagWrapper.remove(); // 삭제버튼 누르면 요소 삭제
+
+      const index = hashtags.indexOf(sanitizedHashtag);
+      if (index > -1) {
+        hashtags.splice(index, 1);
+      }
     });
 
-    // 삭제 버튼을 버튼에 추가
-    hashtagElement.appendChild(deleteButton);
+    // hashtagWrapper에 조립
+    hashtagWrapper.appendChild(hashtagElement);
+    hashtagWrapper.appendChild(deleteButton);
+    hashtagList.appendChild(hashtagWrapper);
 
     // 입력 필드 초기화
     hashtagInput.value = '';
@@ -141,3 +149,5 @@ hashtagInput.addEventListener('keyup', function (event) {
     addHashtag();
   }
 });
+
+console.log('===', hashtags);

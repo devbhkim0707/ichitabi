@@ -100,6 +100,23 @@
   cursor: pointer;
 }
 
+#hash-div, 
+#hash-season {
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  color: #9c9c9c;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.active {
+  color: #121212;
+}
+
 .kiqJ8lXv0XRSXSa_ThjML:hover {
   fill: #ffe2e5;
 }
