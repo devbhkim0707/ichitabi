@@ -62,8 +62,8 @@ h2 {
   gap: 5px;
 }
 #main2 p {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border: 2px solid #113062;
   border-radius: 50%;
   text-indent: -999999px;
@@ -71,6 +71,9 @@ h2 {
 }
 .rating {
   background-color: #113062;
+}
+#star-content {
+  margin: 5px 5px;
 }
 
 /* main3 */
@@ -163,29 +166,40 @@ h2 {
   border-radius: 5px;
   font-size: 30px;
 }
+#main6-2 {
+  width: 800px;
+}
 #hashtag-list {
   display: flex;
   flex-wrap: wrap;
-  width: 800px;
   gap: 12px;
 }
-.add-hashtag {
+
+.hashtag-item {
+  display: flex;
+  align-items: center;
   background-color: #113062;
   color: #ffffff;
-  padding-left: 40px;
-  padding-right: 10px;
   border-radius: 5px;
   height: 30px;
-  line-height: 30px;
   font-size: 18px;
+  padding-left: 40px;
+  padding-right: 10px;
+}
+.add-hashtag {
+  line-height: 30px;
 }
 .delete-btn {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #f0f6ff;
-  margin-top: 5px;
   margin-left: 30px;
+  background-color: #f0f6ff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .delete-btn:hover {
   background-color: #ccd1d9;
