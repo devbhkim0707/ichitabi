@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <title>ICHITABI - 당신의 가장 좋았던 일본을 공유해주세요</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/review_write.css" />
-  </head>
-  <body>
-    <div id="header"></div>
-    <div id="wrapper">
-      <h1>당신의 여행을 알려주세요!</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>ICHITABI - 당신의 가장 좋았던 일본을 공유해주세요</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/review_write.css" />
+</head>
+
+<body>
+  <div id="header"></div>
+  <div id="wrapper">
+    <h1>당신의 여행을 알려주세요!</h1>
+    <div class="row">
       <div id="title">
         <div id="title-left">
           <h2>장소 이름</h2>
           <button id="map-btn">지도</button>
         </div>
         <ul class="map-list">
-          <li class="japan"><p>일본</p></li>
+          <li class="japan">
+            <p>일본</p>
+          </li>
           <p>&nbsp;>&nbsp;</p>
-          <li class="kanto"><p>간토</p></li>
+          <li class="kanto">
+            <p>간토</p>
+          </li>
           <p>&nbsp;>&nbsp;</p>
-          <li class="tokyo"><p>도쿄</p></li>
+          <li class="tokyo">
+            <p>도쿄</p>
+          </li>
         </ul>
       </div>
       <div id="main1">
-        <input
-          type="text"
-          placeholder="여행한 장소의 이름을 알려주세요!"
-          id="review-name"
-          maxlength="30"
-          value=""
-        />
+        <input type="text" placeholder="여행한 장소의 이름을 알려주세요!" id="review-name" maxlength="30" value="" />
         <p><span id="review-name-count">0</span>/30 최대 글자수</p>
       </div>
-
+    </div>
+    <div class="row">
       <h2>평점</h2>
       <div id="main2">
         <p class="star">0</p>
@@ -51,7 +52,8 @@
         <p class="star">0</p>
         <span id="star-content"></span>
       </div>
-
+    </div>
+    <div class="row">
       <h2>시기</h2>
       <div id="main3">
         <div class="year">
@@ -94,7 +96,8 @@
           </select>
         </div>
       </div>
-
+    </div>
+    <div class="row">
       <h2>동행</h2>
       <div id="main4">
         <ul class="companion">
@@ -117,19 +120,15 @@
           </li>
         </ul>
       </div>
-
+    </div>
+    <div class="row">
       <h2>내용</h2>
       <div id="main5">
-        <input
-          type="text"
-          placeholder="여행한 장소를 소개 해주세요!"
-          id="review-content"
-          maxlength="300"
-          value=""
-        />
+        <input type="text" placeholder="여행한 장소를 소개 해주세요!" id="review-content" maxlength="300" value="" />
         <p><span id="review-content-count">0</span>/300 최대 글자수</p>
       </div>
-
+    </div>
+    <div class="row">
       <h2>해시태그</h2>
       <div id="main6-1">
         <ul class="hashtag1">
@@ -145,29 +144,25 @@
       <div id="main6-2">
         <div id="hashtag-list"></div>
         <div id="hashtag2">
-          <input
-            type="text"
-            placeholder="추가하고 싶은 해시태그를 작성해주세요!"
-            id="hashtag-input"
-            maxlength="30"
-            value=""
-          />
+          <input type="text" placeholder="추가하고 싶은 해시태그를 작성해주세요!" id="hashtag-input" maxlength="30" value="" />
           <button id="hashtag-add-btn">+</button>
         </div>
       </div>
-
+    </div>
+    <div class="row">
       <h2>사진 추가하기</h2>
       <div id="main7">
         <p>🏞️</p>
         <p style="font-size: 13px; font-weight: 700">클릭하여 사진 추가하기</p>
         <p style="font-size: 13px">또는 끌어오기</p>
       </div>
-
-      <div id="main8"><button>작성</button></div>
     </div>
-    <div id="footer"></div>
-    <script src="../js/review_write.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/util.js"></script>
-  </body>
+    <div id="main8"><button>작성</button></div>
+  </div>
+  <div id="footer"></div>
+  <script src="../js/review_write.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/util.js"></script>
+</body>
+
 </html>

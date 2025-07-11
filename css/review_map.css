@@ -20,6 +20,21 @@
   font-weight: 700;
 }
 
+#location{
+  width: 1200px;
+  margin: 40px auto;
+}
+
+#location ul{
+  display: flex;
+  gap: 8px;
+}
+
+#location li,
+#location li a {
+    color: #555;
+}
+
 #wrapper-region {
   width: 1200px;
   margin: 0 auto;
