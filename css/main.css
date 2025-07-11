@@ -1,12 +1,22 @@
 @charset "utf-8";
 
-#search {
+#wrapper-main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#wrapper-main > div {
+  margin-bottom: 60px;
+}
+
+#wrapper-main #search {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 165px);
   text-align: center;
+  margin-bottom: 0;
 }
 
 #search .message-main {

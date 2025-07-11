@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.noto-sans-kr-ichitabi {
+body {
   font-family: 'Noto Sans KR', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;

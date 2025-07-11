@@ -17,8 +17,14 @@ h2 {
 /* title */
 #title {
   display: flex;
+  justify-content: space-between;
+}
+
+#title #title-left {
+  display: flex;
   gap: 30px;
 }
+
 #map-btn {
   cursor: pointer;
   width: 36px;
@@ -26,11 +32,10 @@ h2 {
   background-size: 36px;
   text-indent: -999999999px;
   background-image: url(../resources/icons/map.png);
-  margin-top: 40px;
+  margin-top: 45px;
 }
 #title ul {
   margin-top: 60px;
-  margin-left: 500px;
 }
 .map-list {
   display: flex;
