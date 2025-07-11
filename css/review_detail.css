@@ -1,9 +1,10 @@
 @charset "utf-8";
 
 #name {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   margin-top: 40px;
+  text-align: left;
 }
 #wrapper {
   position: relative;
@@ -14,48 +15,55 @@
 
 #location ul {
   display: flex;
+  gap: 8px;
+}
+#location li{
+  color: #aaa;
+}
+#location li a{
+  color: #555;
 }
 
 #review-info {
   text-align: left;
+}
+.btn-writer{
+  position: absolute;
+  top: 72px;
+  right: 0;
 }
 #edit-btn,
 #delete-btn {
   cursor: pointer;
   width: 30px;
   height: 30px;
-  background-size: 30px;
+  margin-left: 16px;
+  background-size: 30px auto;
+  background-repeat: no-repeat;
+  background-position: center;
   text-indent: -999999px;
 }
 #edit-btn {
   background-image: url(../resources/icons/edit.png);
-  position: absolute;
-  top: 10px;
-  right: 44px;
 }
 #delete-btn {
   background-image: url(../resources/icons/delete.png);
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
 
 #main1 {
-  margin-top: 30px;
-  margin-bottom: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 40px;
   display: flex;
-  justify-content: space-between;
+  gap: 32px;
 }
-
 .star {
   display: flex;
   gap: 5px;
+  align-items: center;
 }
 .star p {
-  width: 30px;
-  height: 30px;
+  width: 12px;
+  height: 12px;
   border: 2px solid #113062;
   border-radius: 50%;
   text-indent: -999999px;
@@ -64,27 +72,76 @@
   background-color: #113062;
 }
 
-#main2 {
-  margin-top: 20px;
+#main-img{
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
 }
-
-#main-img img {
+#main-img .left{
   width: 800px;
+}
+#main-img .left img {
+  width: 100%;
   height: 500px;
   object-fit: cover;
 }
+#main-img .right{
+  width: 380px;
+}
+#main-img .right p:first-child{
+  margin-bottom: 20px;
+}
+#main-img .right img{
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
 #main2 {
   display: flex;
-  gap: 50px;
-  width: 600px;
-  margin-left: 200px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-top: 32px;
+  padding-bottom: 32px;
+}
+#main2 .left{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+#main2-0{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+#main2-0 #avatar{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+#main2-0 #nick{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#main2-0 .avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #main2-1 {
   display: flex;
-  gap: 20px;
+  gap: 8px;
+}
+#main2-1 p{
+  border: 1px solid #113062;
+  padding: 4px 12px;
+  border-radius: 40px;
+  color: #113062;
 }
 #main2-2,
 #main2-3 {
@@ -94,23 +151,23 @@
 
 #main2-1,
 #period,
-#companion,
+#companion{
+  font-size: 15px;
+}
 #hashtag {
-  font-size: 22px;
+  font-size: 16px;
+  color: #333;
 }
 #date,
 #companion-content {
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 700;
+  color: #113062;
 }
 
 #content {
   margin-top: 30px;
   text-align: left;
-  width: 800px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
 }
 #content p {
   font-size: 20px;
@@ -119,48 +176,48 @@
 
 #content-1 {
   margin-top: 15px;
-  margin-bottom: 50px;
-  width: 800px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
   text-align: left;
-  font-size: 24px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 #main3 {
   display: flex;
-  gap: 25px;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 24px;
+  align-items: center;
+}
+#main3 #like{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.7;
 }
 #like-btn,
 #share-btn {
   cursor: pointer;
   width: 30px;
   height: 30px;
-  background-size: 30px;
   text-indent: -999999px;
+  background-repeat: no-repeat;background-position: center;
 }
 #like-btn {
   background-image: url(../resources/icons/heart.png);
+  background-size: 24px auto;
 }
 
 #like-btn.on {
-  width: 30px;
-  height: 30px;
-  background-size: 30px;
   background-image: url(../resources/icons/redheart.png);
-  text-indent: -99999px;
 }
 
 #share-btn {
   background-image: url(../resources/icons/share.png);
+  background-size: 20px auto;
 }
 
 #main4 {
   width: 1200px;
-  margin: 30px auto;
+  margin: 0px auto;
+  border-top: 1px solid #ddd;
+  padding: 80px 0 100px 0;
 }
 
 #main4 ul {
@@ -172,7 +229,6 @@
 
 .review-list {
   width: 220px;
-  height: 400px;
   border-radius: 10px;
   position: relative;
 }
