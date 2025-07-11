@@ -1,10 +1,11 @@
 @charset "utf-8";
+
 h1 {
   margin-top: 50px;
   text-align: center;
 }
+
 h2 {
-  margin-top: 50px;
   margin-bottom: 15px;
 }
 
@@ -14,29 +15,43 @@ h2 {
   margin-right: auto;
 }
 
+#wrapper .row {
+  margin-bottom: 40px;
+}
+
 /* title */
 #title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 12px;
 }
 
 #title #title-left {
   display: flex;
-  gap: 30px;
+  gap: 12px;
+  align-items: center;
+}
+
+#title #title-left h2 {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 18px;
 }
 
 #map-btn {
   cursor: pointer;
-  width: 36px;
-  height: 36px;
-  background-size: 36px;
+  width: 24px;
+  height: 24px;
+  background-size: 24px auto;
   text-indent: -999999999px;
   background-image: url(../resources/icons/map.png);
-  margin-top: 45px;
 }
-#title ul {
-  margin-top: 60px;
-}
+
 .map-list {
   display: flex;
   font-size: 18px;
@@ -44,16 +59,20 @@ h2 {
 
 /* main1 */
 #main1 input {
+  box-sizing: border-box;
   width: 800px;
   height: 50px;
   text-align: center;
   font-size: 15px;
-  margin-bottom: 3px;
   border-radius: 5px;
+  border: 1px solid #ddd;
 }
+
 #main1 p {
   text-align: right;
-  font-size: 10px;
+  font-size: 13px;
+  color: #555;
+  margin-top: 8px;
 }
 
 /* main2 */
@@ -61,6 +80,7 @@ h2 {
   display: flex;
   gap: 5px;
 }
+
 #main2 p {
   width: 30px;
   height: 30px;
@@ -69,6 +89,7 @@ h2 {
   text-indent: -999999px;
   cursor: pointer;
 }
+
 .rating {
   background-color: #113062;
 }
@@ -79,47 +100,55 @@ h2 {
 /* main3 */
 #main3 {
   display: flex;
-  gap: 20px;
+  gap: 12px;
 }
+
 #main3 select {
   width: 200px;
-  height: 30px;
+  height: 40px;
   text-align: center;
   border-radius: 5px;
-  background-color: #f0f6ff;
+  border: 1px solid #ddd;
 }
 
 /* main4 */
 #main4 ul {
   display: flex;
-  justify-content: space-between;
+  gap: 12px;
   text-align: center;
 }
+
 #main4 button {
   width: 150px;
-  height: 30px;
-  line-height: 30px;
-  font-size: 18px;
-  border: 2px solid #113062;
+  height: 40px;
+  font-size: 15px;
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
+
 .companion-btn.selected {
   background-color: #113062;
+  border-color: #113062;
   color: #ffffff;
 }
 
 /* main5 */
 #main5 input {
+  box-sizing: border-box;
   width: 800px;
   height: 150px;
   text-align: center;
   font-size: 15px;
   margin-bottom: 3px;
   border-radius: 5px;
+  border: 1px solid #ddd;
 }
+
 #main5 p {
   text-align: right;
-  font-size: 10px;
+  font-size: 13px;
+  color: #555;
+  margin-top: 8px;
 }
 
 /* main6-1 */
@@ -129,37 +158,39 @@ h2 {
   text-align: center;
   margin-bottom: 10px;
 }
+
 .hashtag1 button {
   width: 150px;
-  height: 30px;
-  line-height: 30px;
-  font-size: 18px;
-  border: 2px solid #113062;
+  height: 40px;
+  font-size: 15px;
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
+
 .hashtag-btn.selected {
   background-color: #113062;
+  border-color: #113062;
   color: #ffffff;
 }
 
 /* main6-2 */
-#hasgtag2 {
+#hashtag2 {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  margin-top: 12px;
 }
+
 #hashtag-input {
-  margin-top: 10px;
-  width: 720px;
+  width: 740px;
   height: 50px;
   text-align: center;
   font-size: 15px;
   border-radius: 5px;
+  border: 1px solid #ddd;
 }
+
 #hashtag-add-btn {
-  margin-top: 10px;
-  margin-left: 10px;
-  width: 60px;
+  width: 50px;
   height: 50px;
   background-color: #113062;
   color: #ffffff;
@@ -189,6 +220,7 @@ h2 {
 .add-hashtag {
   line-height: 30px;
 }
+
 .delete-btn {
   width: 20px;
   height: 20px;
@@ -201,6 +233,7 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
 .delete-btn:hover {
   background-color: #ccd1d9;
 }
@@ -212,17 +245,19 @@ h2 {
   justify-content: center;
   width: 800px;
   height: 200px;
-  background-color: #f0f6ff;
+  background-color: #f5f5f5;
   text-align: center;
   border-radius: 5px;
 }
 
 /* main8 */
+#main8 {
+  margin-bottom: 100px;
+}
 #main8 button {
-  width: 600px;
+  width: 800px;
   height: 50px;
-  background-color: black;
+  background-color: #113062;
   color: #ffffff;
   border-radius: 5px;
-  margin: 50px 100px;
 }

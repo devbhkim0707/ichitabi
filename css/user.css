@@ -8,7 +8,6 @@
 #login-container {
   width: 500px;
   margin: 0 auto;
-  margin-top: 60px;
   margin-bottom: 200px;
   color: #212121;
 }
@@ -16,17 +15,17 @@
 #login-container input[type='password'] {
   width: 500px;
   height: 50px;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 18px;
   font-weight: 400;
   color: #212121;
-  border: 2px solid #212121;
+  border: 1px solid #ddd;
   border-radius: 12px;
   box-sizing: border-box;
 }
 
 #login-container input[type='text'] {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 #login-container input[type='password'] {
   margin-bottom: 30px;
@@ -83,6 +82,7 @@
 .links {
   display: flex;
   justify-content: space-between;
+  margin-top: 8px;
 }
 .links a {
   color: #212121;
@@ -91,7 +91,6 @@
 #signup-container {
   width: 500px;
   margin: 0 auto;
-  padding-top: 100px;
   margin-bottom: 100px;
   text-align: center;
   color: #212121;
@@ -100,12 +99,12 @@
 #signup-container input[type='password'] {
   width: 500px;
   height: 50px;
-  margin-bottom: 30px;
-  padding: 10px;
+  margin-bottom: 16px;
+  padding: 10px 20px;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  border: 2px solid #212121;
+  border: 1px solid #ccc;
   border-radius: 8px;
 }
 .genderBtn button {
@@ -132,19 +131,17 @@
   background-color: #113062;
   border-color: #212121;
 }
-
-.agreement input[type='checkbox'] {
-  margin-right: 10px;
-  margin-top: 30px;
+.agreement{
+  margin-top: 20px;
+  text-align: right;
 }
-.agreement label {
-  position: relative;
-  top: 23px;
-  right: 10px;
+.agreement input[type='checkbox'] {
+  margin-right: 4px;
+  margin-top: 6px;
 }
 .submitBtn {
   width: 500px;
-  height: 50px;
+  height: 60px;
   font-size: 18px;
   font-weight: 400;
   background-color: #113062;

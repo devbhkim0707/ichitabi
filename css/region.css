@@ -11,17 +11,28 @@
 
 #regions-list {
   display: flex;
-  gap: 50px;
   flex-wrap: wrap;
+  margin-left: 2px;
 }
 
-#regions-list li {
-  width: 200px;
+#regions-list > li {
+  width: 190px;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  padding: 36px 24px;
+}
+#regions-list > li:nth-child(5n){
+  border-right: 1px solid #ddd;
+}
+#regions-list > li:nth-child(n + 6){
+  border-bottom: 1px solid #ddd;
 }
 
 #regions-list li img {
+  display: block;
   width: 160px;
   height: auto;
+  margin: 0 auto;
   margin-bottom: 24px;
 }
 
@@ -29,12 +40,23 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 2;
-  margin-left: 20px;
+  margin-bottom: 4px;
   color: #121212;
 }
 
-#regions-list .cities {
-  margin-left: 40px;
+#regions-list .cities li {
+  padding: 4px 0;
+}
+#regions-list .cities li::before{
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-right: 8px;
+  background-color: #aaa;
 }
 
 #regions-list .cities a {
