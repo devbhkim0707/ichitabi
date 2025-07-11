@@ -1,194 +1,216 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICHITABI - 당신의 가장 좋았던 일본을 공유해주세요</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/review_detail.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>ICHITABI - 당신의 가장 좋았던 일본을 공유해주세요</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/reset.css" />
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/review_detail.css" />
-</head>
-
-<body>
-  <div id="header"></div>
-  <div id="wrapper">
-    <div id="location">
-      <ul>
-        <li class="">
-          <a href="">홈(아이콘 찾아서 넣기)</a>
-        </li>
-        <li class="seperator">
-          <p>&gt;</p>
-        </li>
-        <li class="">
-          <a href="">일본의 지역(메뉴명 맞나요?)</a>
-        </li>
-        <li class="seperator">
-          <p>&gt;</p>
-        </li>
-        <li class="location-detail">
-          <a href="">일본 전국</a>
-        </li>
-        <li class="seperator">
-          <p>&gt;</p>
-        </li>
-        <li class="location-detail">
-          <a href="">간토</a>
-        </li>
-        <li class="seperator">
-          <p>&gt;</p>
-        </li>
-        <li class="location-detail">
-          <a href="">도쿄도</a>
-        </li>
-      </ul>
-    </div>
-    <div id="location">
-      <ul>
-        <li class="">
-          <a href="">홈(아이콘 찾아서 넣기)</a>
-        </li>
-        <li class="seperator">
-          <p>&gt;</p>
-        </li>
-        <li class="">
-          <a href="">리뷰(위쪽이랑 아래쪽이랑 뭐가 맞나요?)</a>
-        </li>
-      </ul>
-    </div>
-    <div id="name">마루시치 긴자점(丸七)</div>
-    <div class="btn-writer">
-      <button id="edit-btn">수정</button>
-      <button id="delete-btn">삭제</button>
-    </div>
-    <div id="main1">
-      <div class="star">
-        <p class="active">o</p>
-        <p class="active">o</p>
-        <p class="active">o</p>
-        <p class="active">o</p>
-        <p>o</p>
+  <body>
+    <div id="header"></div>
+    <div id="wrapper">
+      <div id="location">
+        <ul>
+          <li class="">
+            <a href="">홈(아이콘 찾아서 넣기)</a>
+          </li>
+          <li class="seperator">
+            <p>&gt;</p>
+          </li>
+          <li class="">
+            <a href="">일본의 지역(메뉴명 맞나요?)</a>
+          </li>
+          <li class="seperator">
+            <p>&gt;</p>
+          </li>
+          <li class="location-detail">
+            <a href="">일본 전국</a>
+          </li>
+          <li class="seperator">
+            <p>&gt;</p>
+          </li>
+          <li class="location-detail">
+            <a href="">간토</a>
+          </li>
+          <li class="seperator">
+            <p>&gt;</p>
+          </li>
+          <li class="location-detail">
+            <a href="">도쿄도</a>
+          </li>
+        </ul>
       </div>
-      <div id="hashtag">#맛집 #카츠동 #돈카츠</div>
-    </div>
-
-    <div id="main-img">
-      <p class="left"><img src="../resources/images/review01.jpeg" alt="onibuscoffee" /></p>
-      <div class="right">
-        <p><img src="../resources/images/review01.jpeg" alt="onibuscoffee" /></p>
-        <p><img src="../resources/images/review01.jpeg" alt="onibuscoffee" /></p>
+      <div id="location">
+        <ul>
+          <li class="">
+            <a href="">홈(아이콘 찾아서 넣기)</a>
+          </li>
+          <li class="seperator">
+            <p>&gt;</p>
+          </li>
+          <li class="">
+            <a href="">리뷰(위쪽이랑 아래쪽이랑 뭐가 맞나요?)</a>
+          </li>
+        </ul>
       </div>
-    </div>
-
-    <div id="main2">
-      <div class="left">
-        <div id="main2-0">
-          <p id="avatar"><img src="아바타 이미지"></p>
-          <p id="nick">닉네임 입력합시다.</p>
+      <div id="name">마루시치 긴자점(丸七)</div>
+      <div class="btn-writer">
+        <button id="edit-btn">수정</button>
+        <button id="delete-btn">삭제</button>
+      </div>
+      <div id="main1">
+        <div class="star">
+          <p class="active">o</p>
+          <p class="active">o</p>
+          <p class="active">o</p>
+          <p class="active">o</p>
+          <p>o</p>
         </div>
+        <div id="hashtag">#맛집 #카츠동 #돈카츠</div>
+      </div>
 
-        <div id="main2-1">
-          <p id="gender">남성</p>
-          <p id="age">30대</p>
-        </div>
-
-        <div id="main2-2">
-          <p id="period">시기</p>
-          <p id="date">2024년 10월</p>
-        </div>
-
-        <div id="main2-3">
-          <p id="companion">동행</p>
-          <p id="companion-content">단독</p>
+      <div id="main-img">
+        <p class="left">
+          <img src="../resources/images/review01.jpeg" alt="onibuscoffee" />
+        </p>
+        <div class="right">
+          <p>
+            <img src="../resources/images/review01.jpeg" alt="onibuscoffee" />
+          </p>
+          <p>
+            <img src="../resources/images/review01.jpeg" alt="onibuscoffee" />
+          </p>
         </div>
       </div>
-      <div class="right">
-        <div id="main3">
-          <div id="like">
-            <button id="like-btn">좋아요</button>
-            <p id="like-count">11</p>
+
+      <div id="main2">
+        <div class="left">
+          <div id="main2-0">
+            <p id="avatar"><img src="아바타 이미지" /></p>
+            <p id="nick">닉네임 입력합시다.</p>
           </div>
-          <button id="share-btn">공유</button>
+
+          <div id="main2-1">
+            <p id="gender">남성</p>
+            <p id="age">30대</p>
+          </div>
+
+          <div id="main2-2">
+            <p id="period">시기</p>
+            <p id="date">2024년 10월</p>
+          </div>
+
+          <div id="main2-3">
+            <p id="companion">동행</p>
+            <p id="companion-content">단독</p>
+          </div>
+        </div>
+        <div class="right">
+          <div id="main3">
+            <div id="like">
+              <button id="like-btn">좋아요</button>
+              <p id="like-count"></p>
+            </div>
+            <button id="share-btn">공유</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="content">
+        <p>장소 소개</p>
+        <div id="content-1">
+          한국에서 보기 힘든 엄청 두꺼운 돈까스를 덮밥으로 먹을 수 있는
+          곳입니다.
+          <br />두께에 비해서 부드러운 고기가 인상적이고 소스 외에도 시치미나
+          <br />소금 같은 다양한 조합을 맛볼 수 있게 준비되어 있습니다. 식사
+          후에는 <br />근처에 미츠코시 백화점이나 카페들이 있어 여행 동선을 짜기
+          좋습니다.
         </div>
       </div>
     </div>
 
-    <div id="content">
-      <p>장소 소개</p>
-      <div id="content-1">
-        한국에서 보기 힘든 엄청 두꺼운 돈까스를 덮밥으로 먹을 수 있는
-        곳입니다.
-        <br />두께에 비해서 부드러운 고기가 인상적이고 소스 외에도 시치미나
-        <br />소금 같은 다양한 조합을 맛볼 수 있게 준비되어 있습니다. 식사
-        후에는 <br />근처에 미츠코시 백화점이나 카페들이 있어 여행 동선을 짜기
-        좋습니다.
-      </div>
+    <div id="main4">
+      <h2>00님이 관심 있을만한 게시물</h2>
+      <ul id="review-ul">
+        <li class="review-list">
+          <a href="">
+            <p class="photo">
+              <img
+                src="../resources/images/reviewList02.jpeg"
+                alt="긴자 스시 후쿠쥬"
+              />
+            </p>
+            <p class="title">긴자 스시 후쿠쥬(鮨 ふくじゅ)</p>
+            <p class="place">도쿄도 주오구</p>
+            <p class="hash">#맛집 #스시 #오마카세</p>
+          </a>
+        </li>
+        <li class="review-list">
+          <a href="">
+            <p class="photo">
+              <img
+                src="../resources/images/reviewList03.jpeg"
+                alt="우설 전문점 네기시 도겐자카점(ねぎし)"
+              />
+            </p>
+            <p class="title">우설 전문점 네기시 도겐자카점(ねぎし)</p>
+            <p class="place">도쿄도 신주쿠구</p>
+            <p class="hash">#맛집 #우설 #체인점</p>
+          </a>
+        </li>
+        <li class="review-list">
+          <a href="">
+            <p class="photo">
+              <img
+                src="../resources/images/reviewList11.jpeg"
+                alt="츠루동탄 롯폰기점"
+              />
+            </p>
+            <p class="title">츠루동탄 롯폰기점</p>
+            <p class="place">도쿄도 미나토구</p>
+            <p class="hash">#맛집 #체인점 #토로로우동</p>
+          </a>
+        </li>
+        <li class="review-list">
+          <a href="">
+            <p class="photo">
+              <img
+                src="../resources/images/reviewList13.jpeg"
+                alt="이에케 총본산 요시무라야(家系総本山 吉村家)"
+              />
+            </p>
+            <p class="title">이에케 총본산 요시무라야(家系総本山 吉村家)</p>
+            <p class="place">도쿄도 요코하마시</p>
+            <p class="hash">#맛집 #라멘 #이에케</p>
+          </a>
+        </li>
+        <li class="review-list">
+          <a href="">
+            <p class="photo">
+              <img
+                src="../resources/images/reviewList14.jpeg"
+                alt="츠키지 스시 센"
+              />
+            </p>
+            <p class="title">츠키지 스시 센</p>
+            <p class="place">도쿄도 주오구</p>
+            <p class="hash">#맛집 #스시 #카이센동</p>
+          </a>
+        </li>
+      </ul>
     </div>
-  </div>
-
-  <div id="main4">
-    <h2>00님이 관심 있을만한 게시물</h2>
-    <ul id="review-ul">
-      <li class="review-list">
-        <a href="">
-          <p class="photo">
-            <img src="../resources/images/reviewList02.jpeg" alt="긴자 스시 후쿠쥬" />
-          </p>
-          <p class="title">긴자 스시 후쿠쥬(鮨 ふくじゅ)</p>
-          <p class="place">도쿄도 주오구</p>
-          <p class="hash">#맛집 #스시 #오마카세</p>
-        </a>
-      </li>
-      <li class="review-list">
-        <a href="">
-          <p class="photo">
-            <img src="../resources/images/reviewList03.jpeg" alt="우설 전문점 네기시 도겐자카점(ねぎし)" />
-          </p>
-          <p class="title">우설 전문점 네기시 도겐자카점(ねぎし)</p>
-          <p class="place">도쿄도 신주쿠구</p>
-          <p class="hash">#맛집 #우설 #체인점</p>
-        </a>
-      </li>
-      <li class="review-list">
-        <a href="">
-          <p class="photo">
-            <img src="../resources/images/reviewList11.jpeg" alt="츠루동탄 롯폰기점" />
-          </p>
-          <p class="title">츠루동탄 롯폰기점</p>
-          <p class="place">도쿄도 미나토구</p>
-          <p class="hash">#맛집 #체인점 #토로로우동</p>
-        </a>
-      </li>
-      <li class="review-list">
-        <a href="">
-          <p class="photo">
-            <img src="../resources/images/reviewList13.jpeg" alt="이에케 총본산 요시무라야(家系総本山 吉村家)" />
-          </p>
-          <p class="title">이에케 총본산 요시무라야(家系総本山 吉村家)</p>
-          <p class="place">도쿄도 요코하마시</p>
-          <p class="hash">#맛집 #라멘 #이에케</p>
-        </a>
-      </li>
-      <li class="review-list">
-        <a href="">
-          <p class="photo">
-            <img src="../resources/images/reviewList14.jpeg" alt="츠키지 스시 센" />
-          </p>
-          <p class="title">츠키지 스시 센</p>
-          <p class="place">도쿄도 주오구</p>
-          <p class="hash">#맛집 #스시 #카이센동</p>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="footer"></div>
-  <script src="../js/review_detail.js"></script>
-  <script src="../js/common.js"></script>
-  <script src="../js/util.js"></script>
-</body>
-
+    <div id="footer"></div>
+    <script src="../js/review_detail.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/util.js"></script>
+  </body>
 </html>
