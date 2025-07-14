@@ -3,12 +3,23 @@
 #region-photo {
   position: relative;
   width: 100%;
-  height: calc(100vh - 165px);
+  height: calc(100vh - 120px);
   overflow: hidden;
 }
 
-#region-photo img {
-  width: 100%;
+.carousel .carousel-item {
+  position: relative;
+  transition: 0.5s;
+}
+
+.carousel .carousel-item li {
+  float: left;
+}
+
+.carousel .carousel-item img {
+  width: 100vw;
+  height: calc(100vh - 120px);
+  object-fit: cover;
 }
 
 #region-photo #region-title {
@@ -20,19 +31,30 @@
   font-weight: 700;
 }
 
-#location{
+#location {
   width: 1200px;
   margin: 40px auto;
 }
 
-#location ul{
+#location ul {
   display: flex;
   gap: 8px;
 }
 
 #location li,
 #location li a {
-    color: #555;
+  color: #555;
+}
+
+#location .btn-home a {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  background-image: url('../resources/icons/home.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: -999999px;
 }
 
 #wrapper-region {
