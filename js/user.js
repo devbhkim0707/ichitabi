@@ -136,12 +136,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const pwErrorDiv = document.getElementById('pw-error');
 
   //테스트 계정 로컬스토리지
+  // userType : 0 - admin, 1 - user
+  const userType = {
+    0: 'admin',
+    1: 'user',
+  };
+
   const testAccounts = [
-    { id: 'test1@example.com', pw: 'test1234!' },
-    { id: 'test2@example.com', pw: 'test1234!' },
-    { id: 'test3@example.com', pw: 'test1234!' },
-    { id: 'test4@example.com', pw: 'test1234!' },
-    { id: 'macademy@example.com', pw: 'test1234!' },
+    { id: 'test1@example.com', pw: 'test1234!', type: 1 },
+    { id: 'test2@example.com', pw: 'test1234!', type: 1 },
+    { id: 'test3@example.com', pw: 'test1234!', type: 1 },
+    { id: 'test4@example.com', pw: 'test1234!', type: 1 },
+    { id: 'macademy@example.com', pw: 'test1234!', type: 0 },
   ];
 
   // 지우기
@@ -226,7 +232,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     sessionStorage.setItem('isLoggedIn', 'true');
     alert(`로그인 성공!(${userId})`);
-    window.location.href = '../index.html';
+    if (userType[account.type] === 'admin') {
+      window.location.href = '../admin/admin.html';
+    } else {
+      window.location.href = '../index.html';
+    }
   });
 
   //모달관련
