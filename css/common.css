@@ -7,7 +7,6 @@ body {
   font-style: normal;
 }
 
-
 header {
   position: relative;
   min-width: 1200px;
@@ -98,7 +97,11 @@ header .gnb li a {
   color: #212121;
 }
 
-header .gnb li a:hover{
+header .gnb #region-btn a {
+  height: 100px;
+}
+
+header .gnb li a:hover {
   color: #113062;
 }
 
@@ -108,6 +111,131 @@ header .gnb li .seperator {
   height: 18px;
   margin-top: 17px;
   background-color: #b5b5b5;
+}
+
+header #dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  z-index: 100;
+  background-color: #f8f8f8;
+}
+
+#wrapper-dropdown {
+  width: 1200px;
+  margin: 30px auto;
+}
+
+#wrapper-dropdown .page-title {
+  margin-bottom: 60px;
+}
+
+#wrapper-dropdown #regions-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2px;
+}
+
+#wrapper-dropdown #regions-list > li {
+  width: 190px;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  padding: 36px 24px;
+}
+
+#wrapper-dropdown #regions-list > li:nth-child(5n) {
+  border-right: 1px solid #ddd;
+}
+
+#wrapper-dropdown #regions-list > li:nth-child(n + 6) {
+  border-bottom: 1px solid #ddd;
+}
+
+#wrapper-dropdown #regions-list li img {
+  display: block;
+  width: 160px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+#wrapper-dropdown #regions-list .region-name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 2;
+  margin-bottom: 4px;
+  color: #121212;
+}
+
+#wrapper-dropdown #regions-list .cities li {
+  padding: 4px 0;
+}
+
+#wrapper-dropdown #regions-list .cities li::before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-right: 8px;
+  background-color: #aaa;
+}
+
+#wrapper-dropdown #regions-list .cities a {
+  color: #121212;
+}
+
+.floating {
+  width: 120px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+
+.floating #review-write-btn {
+  display: block;
+  width: 55px;
+  height: 55px;
+  margin-left: auto;
+  border-radius: 15px;
+  text-indent: -999999px;
+  background-color: #dbdbdb;
+  background-image: url('../resources/icons/write.png');
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#speech-bubble {
+  display: none;
+  position: relative;
+  margin-bottom: 16px;
+  padding: 5px;
+  background: #113062;
+  border-radius: 0.4em;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #eeeeee;
+}
+
+#speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 70%;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-top-color: #113062;
+  border-bottom: 0;
+  border-right: 0;
+  margin-left: -6px;
+  margin-bottom: -12px;
 }
 
 footer {
@@ -136,22 +264,22 @@ footer .footer-wrapper .logo {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.footer-text{
+.footer-text {
   font-size: 14px;
   line-height: 2.1;
   color: #666;
 }
 
-.footer-text span{
+.footer-text span {
   font-style: 8px;
   color: #bbb;
   padding: 0 12px;
 }
-.footer-right h2{
+.footer-right h2 {
   margin-bottom: 12px;
   font-size: 18px;
 }
-.footer-right p{  
+.footer-right p {
   font-size: 14px;
   line-height: 2.1;
 }
