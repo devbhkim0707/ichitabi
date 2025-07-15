@@ -57,15 +57,16 @@ const tagSselectedBtn = new Set(); // Set을 사용하여 중복 선택 방지
 // 해시태그 버튼 - 중복 클릭 가능, 한번더 클릭시 원래대로
 hashtagBtn.forEach((button) => {
   button.addEventListener('click', () => {
-    const buttonText = button.textContent;
+    const buttonText = button.textContent.trim();
+    const textWithoutHash = buttonText.replace(/^#/, '');
 
-    if (tagSselectedBtn.has(buttonText)) {
+    if (tagSselectedBtn.has(textWithoutHash)) {
       // 이미 선택된 버튼일 경우 선택 해제
-      tagSselectedBtn.delete(buttonText);
+      tagSselectedBtn.delete(textWithoutHash);
       button.classList.remove('selected');
     } else {
       // 선택되지 않은 버튼일 경우 선택
-      tagSselectedBtn.add(buttonText);
+      tagSselectedBtn.add(textWithoutHash);
       button.classList.add('selected');
     }
 
@@ -78,76 +79,96 @@ const hashtagList = document.getElementById('hashtag-list');
 const hashtagInput = document.getElementById('hashtag-input');
 const addHashtagBtn = document.getElementById('hashtag-add-btn');
 const hashtags = [];
-const hashtagElement = document.createElement('button');
+// const hashtagElement = document.createElement('button');
 
 // 추가 버튼 클릭 이벤트 리스너
 addHashtagBtn.addEventListener('click', addHashtag);
 
 // 해시태그 추가 함수
-function addHashtag() {
-  const hashtagText = hashtagInput.value.trim();
+function addHashtag(inputText) {
+  const hashtagText = (inputText || hashtagInput.value).trim();
 
-  if (hashtagText !== '') {
-    // 중복 태그 확인
-    if (hashtags.includes(hashtagText)) {
-      alert('이미 추가된 해시태그입니다.');
-      hashtagInput.value = '';
-      return;
-    }
-
-    // 특수문자 및 공백 확인
-    const specialCharRegex = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-    if (specialCharRegex.test(hashtagText)) {
-      alert('특수문자는 사용할 수 없습니다.');
-      hashtagInput.value = '';
-      return;
-    }
-
-    // 공백 제거
-    const sanitizedHashtag = hashtagText.replace(/\s/g, '');
-
-    // 해시태그 배열에 추가
-    hashtags.push(sanitizedHashtag);
-
-    // 해시태그 요소 생성 및 추가
-    const hashtagWrapper = document.createElement('div');
-    hashtagWrapper.classList.add('hashtag-item');
-
-    const hashtagElement = document.createElement('span');
-    hashtagElement.classList.add('add-hashtag');
-    hashtagElement.textContent = `#${sanitizedHashtag}`;
-
-    // 해시태그 삭제 버튼 추가
-    // 삭제 버튼 생성
-    const deleteButton = document.createElement('button');
-    deleteButton.classList.add('delete-btn');
-    deleteButton.textContent = 'x';
-
-    // 삭제 버튼 클릭 이벤트
-    deleteButton.addEventListener('click', function () {
-      hashtagWrapper.remove(); // 삭제버튼 누르면 요소 삭제
-
-      const index = hashtags.indexOf(sanitizedHashtag);
-      if (index > -1) {
-        hashtags.splice(index, 1);
-      }
-    });
-
-    // hashtagWrapper에 조립
-    hashtagWrapper.appendChild(hashtagElement);
-    hashtagWrapper.appendChild(deleteButton);
-    hashtagList.appendChild(hashtagWrapper);
-
-    // 입력 필드 초기화
-    hashtagInput.value = '';
+  // console.log(hashtagText);
+  // 태그 입력 확인
+  if (hashtagText === '') {
+    alert('해시태그를 입력해주세요.');
+    return;
   }
+
+  //모든 공백 제거
+  const sanitizedHashtag = hashtagText.replace(/\s/g, '');
+
+  // 특수문자 및 공백 확인
+  const specialCharRegex = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+  if (specialCharRegex.test(sanitizedHashtag)) {
+    alert('특수문자는 사용할 수 없습니다.');
+    hashtagInput.value = '';
+    return;
+  }
+
+  const hashtagsWithEun = ['맛집', '야경', '공원'];
+  const hashtagsWithNeun = ['카페', '테마파크'];
+  const predefinedHashtags = [...hashtagsWithEun, ...hashtagsWithNeun];
+
+  // 기본 해시태그일 경우: 클릭 여부에 따라 안내
+  if (predefinedHashtags.includes(sanitizedHashtag)) {
+    const particle = hashtagsWithEun.includes(sanitizedHashtag) ? '은' : '는';
+
+    if (tagSselectedBtn.has(sanitizedHashtag)) {
+      alert(`${sanitizedHashtag}${particle} 위에서 이미 선택되었습니다.`);
+    } else {
+      alert(`${sanitizedHashtag}${particle} 위에서 선택해 주세요.`);
+    }
+    hashtagInput.value = '';
+    return;
+  } else if (hashtags.includes(sanitizedHashtag)) {
+    alert('이미 추가된 해시태그입니다.');
+    hashtagInput.value = '';
+    return; // 사용자 입력 해시태그 중복 체크
+  }
+
+  // 해시태그 배열에 추가
+  hashtags.push(sanitizedHashtag);
+
+  // 해시태그 요소 생성 및 추가
+  const hashtagWrapper = document.createElement('div');
+  hashtagWrapper.classList.add('hashtag-item');
+
+  const hashtagElement = document.createElement('span');
+  hashtagElement.classList.add('add-hashtag');
+  hashtagElement.textContent = `#${sanitizedHashtag}`;
+
+  // 해시태그 삭제 버튼 추가
+  // 삭제 버튼 생성
+  const deleteButton = document.createElement('button');
+  deleteButton.classList.add('delete-btn');
+  deleteButton.textContent = 'x';
+
+  // 삭제 버튼 클릭 이벤트
+  deleteButton.addEventListener('click', function () {
+    hashtagWrapper.remove(); // 삭제버튼 누르면 요소 삭제
+
+    const index = hashtags.indexOf(sanitizedHashtag);
+    if (index > -1) {
+      hashtags.splice(index, 1);
+    }
+  });
+
+  // hashtagWrapper에 조립
+  hashtagWrapper.appendChild(hashtagElement);
+  hashtagWrapper.appendChild(deleteButton);
+  hashtagList.appendChild(hashtagWrapper);
+
+  // 입력 필드 초기화
+  hashtagInput.value = '';
 }
 
 // 엔터 키로도 해시태그 추가
 hashtagInput.addEventListener('keyup', function (event) {
   if (event.key === 'Enter') {
-    addHashtag();
+    event.preventDefault(); // 중복되는 이벤트 한번 무효화 시키기
+    const inputValue = hashtagInput.value;
+    // setTimeout(addHashtag(), 100);
+    addHashtag(inputValue);
   }
 });
-
-console.log('===', hashtags);
