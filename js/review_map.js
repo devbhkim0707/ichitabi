@@ -1,13 +1,6 @@
 // map.js
 
-const regionTokyo = document.getElementsByClassName('kiqJ8lXv0XRSXSa_ThjML')[0];
-
-regionTokyo.addEventListener('click', () => {
-  window.location.href = './write.html';
-});
-
 window.onload = function () {
-  console.log('시작');
   const carouselItem = document.querySelector('.carousel-item');
   const carouselLi = carouselItem.querySelectorAll('li');
 
@@ -31,7 +24,6 @@ window.onload = function () {
 
   // 슬라이드 진행
   function slideToNext() {
-    console.log(currentIndex, ':idx', translate, ':translate');
     currentIndex += 1;
     translate -= liWidth;
     carouselItem.style.transform = `translateX(${translate}px)`;
