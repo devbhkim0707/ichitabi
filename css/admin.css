@@ -3,17 +3,19 @@
 header .gnb-admin {
   position: absolute;
   left: 50%;
-  margin-left: -140px;
-  top: 70px;
+  top: 35px;
+  transform: translateX(-50%);
+  line-height: 50px;
 }
 
 header .gnb-admin ul {
   display: flex;
-  gap: 20px;
 }
 
 header .gnb-admin li a {
-  font-size: 24px;
+  display: block;
+  padding: 0 40px;
+  font-size: 20px;
   font-weight: 700;
   color: #212121;
 }
@@ -21,8 +23,8 @@ header .gnb-admin li a {
 header .gnb-admin li .seperator {
   display: block;
   width: 1px;
-  height: 20px;
-  margin-top: 10px;
+  height: 18px;
+  margin-top: 17px;
   background-color: #b5b5b5;
 }
 
