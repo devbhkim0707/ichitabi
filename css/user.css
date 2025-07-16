@@ -78,18 +78,7 @@
   color: aliceblue;
   cursor: pointer;
 }
-.error-text {
-  font-size: 13px;
-  color: red;
-  margin-top: -17px;
-  margin-bottom: 15px;
-}
-.error-text2 {
-  font-size: 13px;
-  color: red;
-  margin-top: -30px;
-  margin-bottom: 15px;
-}
+
 .modal {
   display: none;
   position: fixed;

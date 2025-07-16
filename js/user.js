@@ -135,26 +135,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const emailErrorDiv = document.getElementById('email-error');
   const pwErrorDiv = document.getElementById('pw-error');
 
-  //테스트 계정 로컬스토리지
   // userType : 0 - admin, 1 - user
   const userType = {
     0: 'admin',
     1: 'user',
   };
-
-  const testAccounts = [
-    { id: 'test1@example.com', pw: 'test1234!', type: 1 },
-    { id: 'test2@example.com', pw: 'test1234!', type: 1 },
-    { id: 'test3@example.com', pw: 'test1234!', type: 1 },
-    { id: 'test4@example.com', pw: 'test1234!', type: 1 },
-    { id: 'macademy@example.com', pw: 'test1234!', type: 0 },
-  ];
-
-  // 지우기
-  // //처음 한번만 계정저장
-  // if (!localStorage.getItem('testAccounts')) {
-  //   localStorage.setItem('testAccounts', JSON.stringify(testAccounts));
-  // }
 
   //저장된 아이디 자동입력
   const savedId = localStorage.getItem('savedId');
@@ -180,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
       loginIdInput.classList.add('input-error');
     }
   });
+
   //비밀번호 검사
   loginPwInput.addEventListener('blur', () => {
     const value = loginPwInput.value.trim();
@@ -193,8 +179,9 @@ document.addEventListener('DOMContentLoaded', function () {
       loginPwInput.classList.add('input-error');
     }
   });
+
   //로그인처리
-  loginBtn.addEventListener('click', () => {
+  loginBtn.addEventListener('click', async function () {
     const userId = loginIdInput.value.trim();
     const userPw = loginPwInput.value.trim();
     const saveIdChecked = saveIdCheckbox.checked;
@@ -212,9 +199,8 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    //const accounts = JSON.parse(localStorage.getItem('testAccounts') || '[]');
+    const account = await getAccount(userId);
 
-    const account = testAccounts.find((acc) => acc.id === userId);
     if (!account) {
       alert('존재하지 않는 이메일입니다.');
       return;
@@ -224,6 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('비밀번호가 일치하지 않습니다.');
       return;
     }
+
     //로그인 성공 시 아이디 저장 처리
     if (saveIdChecked) {
       localStorage.setItem('savedId', userId);
@@ -231,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.removeItem('savedId');
     }
     sessionStorage.setItem('isLoggedIn', 'true');
-    alert(`로그인 성공!(${userId})`);
+    alert(`로그인 성공! ${account.nickname}님 환영합니다!`);
     if (userType[account.type] === 'admin') {
       window.location.href = '../admin/admin.html';
     } else {
@@ -260,3 +247,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+async function getAccount(inputId) {
+  const users = await getUsers();
+  const account = users.find((acc) => acc.email === inputId);
+
+  return account;
+}
+
+function getUsers() {
+  return fetch('../resources/data/user.json').then((res) => {
+    return res.json();
+  });
+}
