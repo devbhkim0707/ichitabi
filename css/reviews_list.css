@@ -7,17 +7,23 @@
 
 #bread-crumb {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
-#home {
-  width: 25px;
-  height: 25px;
+#bread-crumb li, 
+#bread-crumb li a {
+  color: #555;
 }
 
-#recommend {
-  font-weight: 700;
+#bread-crumb #home {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  background-image: url(../resources/icons/home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: -99999px;
 }
 
 #review-div {
@@ -26,7 +32,7 @@
 
 #review-div ul {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -100,6 +106,7 @@
   background-size: 20px;
   background-image: url(../resources/icons/redheart.png);
   text-indent: -99999px;
+  cursor: pointer;
 }
 
 #more-btn {
