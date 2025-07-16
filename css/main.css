@@ -64,7 +64,7 @@
   margin: 0 auto;
 }
 
-#map h2{
+#map h2 {
   margin-bottom: 24px;
 }
 
@@ -100,7 +100,7 @@
   cursor: pointer;
 }
 
-#hash-div, 
+#hash-div,
 #hash-season {
   margin: 0 auto;
   padding-top: 30px;
@@ -111,7 +111,6 @@
   font-size: 20px;
   cursor: pointer;
 }
-
 
 .active {
   color: #121212;
@@ -132,15 +131,19 @@
 #festivals-list {
   position: relative;
   margin-top: 24px;
+  overflow: hidden;
+  height: 368px;
 }
 
 #festivals-list ul {
   display: flex;
-  justify-content: space-between;
+  white-space: nowrap;
 }
 
 .festival-item {
   width: 280px;
+  margin: 0px 10px;
+  flex-shrink: 0;
 }
 
 .festival-item .festival-photo img {
@@ -170,16 +173,16 @@
   background-color: #113062;
 }
 
-#festivals-list .btn-prev {
+#festivals-list #btn-prev-festival {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 10px;
   margin-top: -40px;
 }
 
-#festivals-list .btn-next {
+#festivals-list #btn-next-festival {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 10px;
   margin-top: -40px;
 }
