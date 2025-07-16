@@ -128,10 +128,6 @@ header #dropdown {
   margin: 30px auto;
 }
 
-#wrapper-dropdown .page-title {
-  margin-bottom: 60px;
-}
-
 #wrapper-dropdown #regions-list {
   display: flex;
   flex-wrap: wrap;
@@ -142,7 +138,7 @@ header #dropdown {
   width: 190px;
   border-top: 1px solid #ddd;
   border-left: 1px solid #ddd;
-  padding: 36px 24px;
+  padding: 12px 24px;
 }
 
 #wrapper-dropdown #regions-list > li:nth-child(5n) {
@@ -151,14 +147,6 @@ header #dropdown {
 
 #wrapper-dropdown #regions-list > li:nth-child(n + 6) {
   border-bottom: 1px solid #ddd;
-}
-
-#wrapper-dropdown #regions-list li img {
-  display: block;
-  width: 160px;
-  height: auto;
-  margin: 0 auto;
-  margin-bottom: 24px;
 }
 
 #wrapper-dropdown #regions-list .region-name {

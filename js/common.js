@@ -18,26 +18,29 @@ $(function () {
   const isLoggedInBoolean = isLoggedIn === 'true';
 
   $('#header').load('../components/header.html', function () {
+    const searchInputEl = document.getElementById('header-search');
+    const logoutBtnEl = document.getElementById('log-out');
+    const signInBtnEl = document.getElementById('sign-in');
+    const signUpBtnEl = document.getElementById('sign-up');
+
     // 헤더 영역의 검색 메뉴 표시 여부 결정
     if (isMainPage) {
-      document.getElementById('header-search').style.display = 'none';
+      searchInputEl.style.display = 'none';
     } else if (!isMainPage) {
-      document.getElementById('header-search').style.display = 'block';
+      searchInputEl.style.display = 'block';
     }
     if (isLoggedInBoolean) {
-      document.getElementById('log-out').style.display = 'block';
-      document.getElementById('sign-in').style.display = 'none';
-      document.getElementById('sign-up').style.display = 'none';
+      logoutBtnEl.style.display = 'block';
+      signInBtnEl.style.display = 'none';
+      signUpBtnEl.style.display = 'none';
     } else if (!isLoggedInBoolean) {
-      document.getElementById('log-out').style.display = 'none';
-      document.getElementById('sign-in').style.display = 'block';
-      document.getElementById('sign-up').style.display = 'block';
+      logoutBtnEl.style.display = 'none';
+      signInBtnEl.style.display = 'block';
+      signUpBtnEl.style.display = 'block';
     }
 
     // 로그아웃 버튼
-    const logoutBtn = document.getElementById('log-out');
-
-    logoutBtn.addEventListener('click', () => {
+    logoutBtnEl.addEventListener('click', () => {
       sessionStorage.setItem('isLoggedIn', 'false');
       window.location.reload();
     });
