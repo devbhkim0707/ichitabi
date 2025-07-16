@@ -25,6 +25,7 @@ function renderReviews(count) {
     const cloneLi = listTempEl.content.firstElementChild.cloneNode(true);
     cloneLi.querySelector('.photo').src = review.imagePath[0];
     cloneLi.querySelector('.age').textContent = review.age;
+    cloneLi.querySelector('.gender').textContent = review.gender === 'm' ? '남성' : '여성';
     cloneLi.querySelector('.title').textContent = review.title;
     cloneLi.querySelector('.place').textContent = review.location;
     cloneLi.querySelector('.hash').textContent = review.hashtag.map(tag => `#${tag}`).join(' ');

@@ -48,6 +48,7 @@
   margin-bottom: 12px;
 }
 
+
 .review-list img {
   width: 280px;
   height: 280px;
@@ -55,10 +56,20 @@
   object-fit: cover;
 }
 
+.review-list .age-gender {
+  display: flex;
+  gap: 5px;
+}
+
 .review-list .age {
   font-size: 14px;
   color: #121212;
   margin-bottom: 10px;
+}
+
+.review-list .gender {
+  font-size: 14px;
+  color: #121212;
 }
 
 .review-list .title {
