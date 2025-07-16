@@ -85,8 +85,8 @@ const hashtags = [];
 addHashtagBtn.addEventListener('click', addHashtag);
 
 // 해시태그 추가 함수
-function addHashtag(inputText) {
-  const hashtagText = (inputText || hashtagInput.value).trim();
+function addHashtag() {
+  const hashtagText = hashtagInput.value.trim();
 
   // console.log(hashtagText);
   // 태그 입력 확인
@@ -167,8 +167,35 @@ function addHashtag(inputText) {
 hashtagInput.addEventListener('keyup', function (event) {
   if (event.key === 'Enter') {
     event.preventDefault(); // 중복되는 이벤트 한번 무효화 시키기
-    const inputValue = hashtagInput.value;
+    // const inputValue = hashtagInput.value;
     // setTimeout(addHashtag(), 100);
-    addHashtag(inputValue);
+    addHashtag();
   }
 });
+
+// 장소 이름 글자수 카운팅
+const nameInput = document.getElementById('review-name');
+const nameCount = document.getElementById('review-name-count');
+
+nameInput.addEventListener('input', () => {
+  nameCount.textContent = nameInput.value.length;
+});
+
+// 장소 이름 글자수 카운팅
+const contentInput = document.getElementById('review-content');
+const contentCount = document.getElementById('review-content-count');
+
+contentInput.addEventListener('input', () => {
+  contentCount.textContent = contentInput.value.length;
+});
+
+// 작성하기 버튼 클릭시 확인창 보여주기
+function confirmAction() {
+  if (confirm('작성 하시겠습니까?')) {
+    // 나중에 확인 버튼을 클릭했을 때 데이터 저장 코드
+    alert('게시물 업로드를 시작하겠습니다!');
+  } else {
+    // 나중에 취소 버튼을 클릭했을 때 이전으로 그냥 아무것도 안거드는
+    alert('작성을 이어서 해주세요!');
+  }
+}
