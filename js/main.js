@@ -25,7 +25,6 @@ seasons.forEach((season, i) => {
     const festivalsListUl = document.querySelector('#festivals-list ul');
 
     if (seasons[i].classList.contains('active')) {
-      console.log('ddddd');
       seasons[i].classList.remove('active');
       currentIndex = 0;
       festivalsListUl.style.transform = 'translateX(0px)';
