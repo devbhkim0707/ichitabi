@@ -1,7 +1,6 @@
 // review_detail.js
 
 import reviews from '../resources/data/reviews.js';
-console.log(reviews[0].imagePath[0]);
 
 const likeBtn = document.getElementById('like-btn');
 const likeCount = document.getElementById('like-count');
@@ -32,12 +31,34 @@ const nick1El = document.getElementById('nick1');
 getReviewerInfo();
 
 async function getReviewerInfo() {
+  // 유저 json 데이터 불러오기
   const users = await getUsers();
   const reviewer = await users.find((user) => user.email === reviews[0].user);
 
+  // 나이 정보 계산
+  const reviewYear = parseInt(reviews[0].date.split('년')[0]);
+  const birthDate = reviewer.birthDate;
+  const birthDateString = birthDate.toString();
+  const birthYear = parseInt(birthDateString.slice(0, 4));
+  const reviewerAge = reviewYear - birthYear;
+
+  const age = calculateAge(reviewerAge);
+
   nickEl.textContent = reviewer.nickname;
   genderEl.textContent = reviewer.gender === 'm' ? '남성' : '여성';
-  ageEl.textContent = reviewer.birthDate;
+  ageEl.textContent = age;
+}
+
+function calculateAge(age) {
+  const dividedAgeByTen = parseInt(age / 10);
+
+  if (dividedAgeByTen < 1) {
+    return '어린이';
+  } else if (dividedAgeByTen > 9) {
+    return '100세 이상';
+  }
+
+  return `${dividedAgeByTen}0대`;
 }
 
 nameEl.textContent = reviews[0].title;
