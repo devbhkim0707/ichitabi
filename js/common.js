@@ -50,19 +50,19 @@ $(function () {
     const dropdown = $('#dropdown');
 
     navBarRegionBtn.on('mouseenter', () => {
-      dropdown.stop().fadeIn();
+      dropdown.stop().fadeIn(200);
     });
 
     navBarRegionBtn.on('mouseleave', () => {
-      dropdown.stop().fadeOut();
+      dropdown.stop().fadeOut(200);
     });
 
     dropdown.on('mouseenter', () => {
-      dropdown.stop().fadeIn();
+      dropdown.stop().fadeIn(200);
     });
 
     dropdown.on('mouseleave', () => {
-      dropdown.stop().fadeOut();
+      dropdown.stop().fadeOut(200);
     });
   });
 
