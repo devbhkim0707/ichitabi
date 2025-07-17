@@ -1,0 +1,110 @@
+[
+  {
+    "_id": 0,
+    "title": "이바라키 미토 매화축제",
+    "imagePath": "./resources/images/festivals_01.jpg",
+    "season": 1
+  },
+  {
+    "_id": 1,
+    "title": "도쿄 아사쿠사 산자 마츠리",
+    "imagePath": "./resources/images/festivals_02.jpeg",
+    "season": 1
+  },
+  {
+    "_id": 2,
+    "title": "도쿠시마 아와오도리 축제",
+    "imagePath": "./resources/images/festivals_03.jpg",
+    "season": 2
+  },
+  {
+    "_id": 3,
+    "title": "교토 기온 마츠리",
+    "imagePath": "./resources/images/festivals_04.webp",
+    "season": 2
+  },
+  {
+    "_id": 4,
+    "title": "아오모리 네부타 축제",
+    "imagePath": "./resources/images/festivals_05.jpg",
+    "season": 2
+  },
+  {
+    "_id": 5,
+    "title": "삿포로 눈 축제",
+    "imagePath": "./resources/images/festivals_06.jpg",
+    "season": 4
+  },
+  {
+    "_id": 6,
+    "title": "나고야 아쓰타신궁 상무제",
+    "imagePath": "./resources/images/festivals_07.jpg",
+    "season": 2
+  },
+  {
+    "_id": 7,
+    "title": "도야마 오와라 카제노본 축제",
+    "imagePath": "./resources/images/festivals_08.jpeg",
+    "season": 3
+  },
+  {
+    "_id": 8,
+    "title": "아키타 가쿠노다테 축제",
+    "imagePath": "./resources/images/festivals_09.jpg",
+    "season": 3
+  },
+  {
+    "_id": 9,
+    "title": "가와고에 마츠리",
+    "imagePath": "./resources/images/festivals_10.webp",
+    "season": 3
+  },
+  {
+    "_id": 10,
+    "title": "나가사키 쿤치",
+    "imagePath": "./resources/images/festivals_11.webp",
+    "season": 3
+  },
+  {
+    "_id": 11,
+    "title": "아오모리 히로사키 벚꽃 축제",
+    "imagePath": "./resources/images/festivals_12.jpg",
+    "season": 1
+  },
+  {
+    "_id": 12,
+    "title": "기후현 다카야마 봄 축제",
+    "imagePath": "./resources/images/festivals_13.jpg",
+    "season": 1
+  },
+  {
+    "_id": 13,
+    "title": "하카타 돈타쿠 미나토 마츠리",
+    "imagePath": "./resources/images/festivals_14.jpg",
+    "season": 1
+  },
+  {
+    "_id": 14,
+    "title": "가나자와 햐쿠만고쿠 마츠리",
+    "imagePath": "./resources/images/festivals_15.webp",
+    "season": 2
+  },
+  {
+    "_id": 15,
+    "title": "가스가 와카미야 온마츠리",
+    "imagePath": "./resources/images/festivals_16.jpg",
+    "season": 4
+  },
+  {
+    "_id": 16,
+    "title": "도카에비스 마츠리",
+    "imagePath": "./resources/images/festivals_17.jpg",
+    "season": 4
+  },
+  {
+    "_id": 17,
+    "title": "나가사키 등불축제",
+    "imagePath": "./resources/images/festivals_18.jpg",
+    "season": 4
+  }
+]
