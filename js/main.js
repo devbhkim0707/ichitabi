@@ -22,12 +22,84 @@ hashs.forEach((hash, i) => {
 
 seasons.forEach((season, i) => {
   season.addEventListener('click', () => {
+    const festivalsListUl = document.querySelector('#festivals-list ul');
+
+    if (seasons[i].classList.contains('active')) {
+      console.log('ddddd');
+      seasons[i].classList.remove('active');
+      currentIndex = 0;
+      festivalsListUl.style.transform = 'translateX(0px)';
+      renderFestivals();
+      return;
+    }
+
     seasons.forEach((festival) => {
       festival.classList.remove('active');
     });
+
     seasons[i].classList.add('active');
+    currentIndex = 0;
+    festivalsListUl.style.transform = 'translateX(0px)';
+    renderFestivals(i + 1);
   });
 });
+
+renderFestivals();
+
+// 축제 영역 렌더링
+const seasonEnum = {
+  1: 'spring',
+  2: 'summer',
+  3: 'fall',
+  4: 'winter',
+};
+
+const festivalsUl = document.querySelector('#festivals-list ul');
+const festivalsTemplateEl = document.getElementById('festival-item-template');
+
+async function renderFestivals(season) {
+  const festivals = await getFestivalsData();
+  festivalsListUl.innerHTML = '';
+
+  if (!season) {
+    festivals.map((festival) => {
+      appendLi(festival);
+    });
+  } else if (seasonEnum[season] === 'spring') {
+    festivals.map((festival) => {
+      if (seasonEnum[festival.season] === 'spring') appendLi(festival);
+    });
+  } else if (seasonEnum[season] === 'summer') {
+    festivals.map((festival) => {
+      if (seasonEnum[festival.season] === 'summer') appendLi(festival);
+    });
+  } else if (seasonEnum[season] === 'fall') {
+    festivals.map((festival) => {
+      if (seasonEnum[festival.season] === 'fall') appendLi(festival);
+    });
+  } else if (seasonEnum[season] === 'winter') {
+    festivals.map((festival) => {
+      if (seasonEnum[festival.season] === 'winter') appendLi(festival);
+    });
+  }
+
+  function appendLi(festival) {
+    const cloneTemplateLi =
+      festivalsTemplateEl.content.firstElementChild.cloneNode(true);
+
+    cloneTemplateLi.querySelector('.festival-photo img').src =
+      festival.imagePath;
+    cloneTemplateLi.querySelector('.festival-photo img').alt = festival.title;
+    cloneTemplateLi.querySelector('.title').textContent = festival.title;
+    festivalsUl.appendChild(cloneTemplateLi);
+  }
+}
+
+function getFestivalsData() {
+  return fetch('./resources/data/festivals.json').then((res) => {
+    return res.json();
+  });
+}
 
 // 축제 영역 캐러셀
 const festivalNextBtn = document.getElementById('btn-next-festival');
@@ -52,7 +124,7 @@ function slide(element, direction, index) {
   const visibleItems = 4;
 
   if (direction === 'left') {
-    if (index === elementLength - visibleItems) {
+    if (index === elementLength - visibleItems || elementLength <= 4) {
       setTimeout(() => {
         bounce(direction), 200;
       });
@@ -60,7 +132,7 @@ function slide(element, direction, index) {
       index++;
     }
   } else if (direction === 'right') {
-    if (index === 0) {
+    if (index === 0 || elementLength <= 4) {
       setTimeout(() => {
         bounce(direction), 200;
       });
