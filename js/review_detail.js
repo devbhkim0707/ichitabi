@@ -27,6 +27,20 @@ const dateEl = document.getElementById('date');
 const companionContentEl = document.getElementById('companion-content');
 const contentEl = document.querySelector('.content-1');
 const nick1El = document.getElementById('nick1');
+const starEl = document.querySelectorAll('#star p');
+
+console.log(starEl);
+renderStars();
+
+function renderStars() {
+  starEl.forEach((star, i) => {
+    if (i < reviews[0].rating) {
+      star.classList.add('filled');
+    } else {
+      star.classList.remove('filled');
+    }
+  });
+}
 
 getReviewerInfo();
 
